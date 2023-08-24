@@ -46,9 +46,8 @@ updating its elements.
 Note that a mutable collection doesn't have to be assigned to a [`var`](basic-syntax.md#variables). Write operations with
 a mutable collection are still possible even if it is assigned to a `val`. The benefit of assigning mutable collections to
 `val` is that you protect the reference to the mutable collection from modification. Over time, as your code grows and becomes
-more complex, it becomes even more important to prevent unintentional modification to references. So we always recommend
-using `val` as much as possible because this leads to safer and more robust code. If you try to reassign a `val` collection,
-you get a compilation error:
+more complex, it becomes even more important to prevent unintentional modification to references. Use `val` as much as possible
+for safer and more robust code. If you try to reassign a `val` collection, you get a compilation error:
 
 ```kotlin
 fun main() {
@@ -298,7 +297,7 @@ says nothing about the elements order.
 ### ArrayDeque
 
 [`ArrayDeque<T>`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-deque/) is an implementation of a double-ended queue, which allows you to add or remove elements both at the beginning or end of the queue.
-As such, `ArrayDeque` also fills the role of both a Stack and Queue data structure in Kotlin. Behind the scenes, `ArrayDeque` is realized using a resizable array that automatically adjusts in size when required.
+As such, `ArrayDeque` also fills the role of both a Stack and Queue data structure in Kotlin. Behind the scenes, `ArrayDeque` is realized using a resizable array that automatically adjusts in size when required:
 
 ```kotlin
 fun main() {
